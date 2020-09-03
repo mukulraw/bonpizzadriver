@@ -1,4 +1,4 @@
-package com.technuoma.easyhomezindiadriver;
+package com.technuoma.bonpizzadriver;
 
 import android.content.Context;
 import android.content.SharedPreferences;

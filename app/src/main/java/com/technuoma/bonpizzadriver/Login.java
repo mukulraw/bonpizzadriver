@@ -1,4 +1,4 @@
-package com.technuoma.easyhomezindiadriver;
+package com.technuoma.bonpizzadriver;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.technuoma.easyhomezindiadriver.loginPOJO.loginBean;
+import com.technuoma.bonpizzadriver.loginPOJO.loginBean;
 
 import retrofit2.Call;
 import retrofit2.Callback;

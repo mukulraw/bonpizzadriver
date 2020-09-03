@@ -1,4 +1,4 @@
-package com.technuoma.easyhomezindiadriver;
+package com.technuoma.bonpizzadriver;
 
 import org.junit.Test;
 

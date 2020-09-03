@@ -1,9 +1,9 @@
-package com.technuoma.easyhomezindiadriver.deliveryDetailsPOJO;
+package com.technuoma.bonpizzadriver.loginPOJO;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class deliveryDetailsBean {
+public class loginBean {
     @SerializedName("status")
     @Expose
     private String status;

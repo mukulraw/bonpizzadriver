@@ -1,4 +1,4 @@
-package com.technuoma.easyhomezindiadriver;
+package com.technuoma.bonpizzadriver;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,8 +30,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.technuoma.easyhomezindiadriver.deliveryDetailsPOJO.Data;
-import com.technuoma.easyhomezindiadriver.deliveryDetailsPOJO.deliveryDetailsBean;
+import com.technuoma.bonpizzadriver.deliveryDetailsPOJO.Data;
+import com.technuoma.bonpizzadriver.deliveryDetailsPOJO.deliveryDetailsBean;
 
 import retrofit2.Call;
 import retrofit2.Callback;

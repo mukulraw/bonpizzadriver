@@ -1,4 +1,4 @@
-package com.technuoma.easyhomezindiadriver.ordersPOJO;
+package com.technuoma.bonpizzadriver.ordersPOJO;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.technuoma.easyhomezindiadriver;
+package com.technuoma.bonpizzadriver;
 
 
 import android.content.Context;

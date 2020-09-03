@@ -1,9 +1,8 @@
-package com.technuoma.easyhomezindiadriver;
+package com.technuoma.bonpizzadriver;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +13,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.technuoma.easyhomezindiadriver.ordersPOJO.Datum;
-import com.technuoma.easyhomezindiadriver.ordersPOJO.ordersBean;
+
+import com.technuoma.bonpizzadriver.ordersPOJO.Datum;
+import com.technuoma.bonpizzadriver.ordersPOJO.ordersBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-public class Bills3 extends Fragment {
+public class Bills4 extends Fragment {
 
 
     RecyclerView grid;
@@ -41,7 +42,6 @@ public class Bills3 extends Fragment {
     TextView date;
     LinearLayout linear;
 
-    String dd;
 
     @Nullable
     @Override
@@ -64,15 +64,14 @@ public class Bills3 extends Fragment {
         date.setVisibility(View.GONE);
 
 
-
         return view;
     }
 
+    BroadcastReceiver singleReceiver;
 
     @Override
     public void onResume() {
         super.onResume();
-
 
 
         progress.setVisibility(View.VISIBLE);
@@ -88,7 +87,7 @@ public class Bills3 extends Fragment {
         AllApiIneterface cr = retrofit.create(AllApiIneterface.class);
 
 
-        Call<ordersBean> call = cr.getOngoingDeliveries(SharePreferenceUtils.getInstance().getString("id"));
+        Call<ordersBean> call = cr.getCompletedDeliveries(SharePreferenceUtils.getInstance().getString("id"));
 
         call.enqueue(new Callback<ordersBean>() {
             @Override
@@ -153,19 +152,19 @@ public class Bills3 extends Fragment {
 
             holder.deldate.setText(item.getDeliveryDate());
 
+
+/*
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                    Log.d("order1" , item.getOrderId());
-
-                    Intent intent = new Intent(context , MainActivity.class);
-                    intent.putExtra("oid" , item.getDelId());
-                    intent.putExtra("order" , item.getOrderId());
+                    Intent intent = new Intent(context , OrderDetails.class);
+                    intent.putExtra("oid" , item.getId());
                     startActivity(intent);
 
                 }
             });
+*/
 
 
         }
@@ -197,6 +196,13 @@ public class Bills3 extends Fragment {
         }
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(singleReceiver);
+
+    }
 
 
 }

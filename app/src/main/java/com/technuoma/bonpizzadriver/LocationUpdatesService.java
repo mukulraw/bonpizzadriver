@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.technuoma.easyhomezindiadriver;
+package com.technuoma.bonpizzadriver;
 
 import android.app.ActivityManager;
 import android.app.Notification;
@@ -45,7 +45,7 @@ import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.technuoma.easyhomezindiadriver.deliveryDetailsPOJO.deliveryDetailsBean;
+import com.technuoma.bonpizzadriver.deliveryDetailsPOJO.deliveryDetailsBean;
 
 import retrofit2.Call;
 import retrofit2.Callback;
