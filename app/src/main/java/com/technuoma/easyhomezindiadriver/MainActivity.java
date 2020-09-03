@@ -1,4 +1,4 @@
-package com.technuoma.emartindiadriver;
+package com.technuoma.easyhomezindiadriver;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,8 +30,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.technuoma.emartindiadriver.deliveryDetailsPOJO.Data;
-import com.technuoma.emartindiadriver.deliveryDetailsPOJO.deliveryDetailsBean;
+import com.technuoma.easyhomezindiadriver.deliveryDetailsPOJO.Data;
+import com.technuoma.easyhomezindiadriver.deliveryDetailsPOJO.deliveryDetailsBean;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                     }
                 });
 
-                if (item.getStatus().equals("pending"))
+                if (item.getStatus().equals("pending") || item.getStatus().equals("dispatched"))
                 {
                     startend.setText("START");
                 }

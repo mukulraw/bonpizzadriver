@@ -1,9 +1,11 @@
-package com.technuoma.emartindiadriver.deliveryDetailsPOJO;
+package com.technuoma.easyhomezindiadriver.ordersPOJO;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class deliveryDetailsBean {
+import java.util.List;
+
+public class ordersBean {
     @SerializedName("status")
     @Expose
     private String status;
@@ -12,7 +14,7 @@ public class deliveryDetailsBean {
     private String message;
     @SerializedName("data")
     @Expose
-    private Data data;
+    private List<Datum> data = null;
 
     public String getStatus() {
         return status;
@@ -30,11 +32,11 @@ public class deliveryDetailsBean {
         this.message = message;
     }
 
-    public Data getData() {
+    public List<Datum> getData() {
         return data;
     }
 
-    public void setData(Data data) {
+    public void setData(List<Datum> data) {
         this.data = data;
     }
 }

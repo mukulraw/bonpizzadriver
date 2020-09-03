@@ -1,18 +1,11 @@
-package com.technuoma.emartindiadriver;
+package com.technuoma.easyhomezindiadriver;
 
-import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -25,13 +18,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.technuoma.emartindiadriver.ordersPOJO.Datum;
-import com.technuoma.emartindiadriver.ordersPOJO.ordersBean;
+import com.technuoma.easyhomezindiadriver.ordersPOJO.Datum;
+import com.technuoma.easyhomezindiadriver.ordersPOJO.ordersBean;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import retrofit2.Call;

@@ -1,4 +1,4 @@
-package com.technuoma.emartindiadriver.loginPOJO;
+package com.technuoma.easyhomezindiadriver.loginPOJO;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
